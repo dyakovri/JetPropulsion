@@ -12,9 +12,8 @@ public:
 	Rocket(double pMass, double pRadius, double rMass, double fMass, double fVel, double fCons);
 	~Rocket();
 
-	double ReactiveF();
 	double N(double F);
-	double GravitationF(double R, double m, double M);
+	double Fr();
 
 	std::vector<double> F(double time, std::vector<double> &coordinates);
 	double Step(double interval);

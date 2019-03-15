@@ -17,30 +17,26 @@ Rocket::Rocket(double pMass, double pRadius, double rMass, double fMass, double 
 
 Rocket::~Rocket() {}
 
-double Rocket::N(double F) {
-	if (Y[0] == 0) return -F;
-	else return 0;
-}
-
-double Rocket::ReactiveF() {
-	if (fMass > 0)
-		return fVel * fCons;
-	else
-		return 0;
-}
-
-double Rocket::GravitationF(double R, double m, double M) {
-	return 9.8 * m;
-	//return (6.67408E-11 * m * M / R / R);
-}
-
 std::vector<double> Rocket::F(double time, std::vector<double> &coordinates) {
+	// x - Y[0], dx/dt - Y[1]
+	// d^2x/dt^2 - FY[1] , dx/dt - FY[0]
 
+	FY[1] = Fr() - (6.6740E-17 * pMass / (Y[0] * Y[0])) + N(6.6740E-17 * pMass / (Y[0] * Y[0]));
 	FY[0] = Y[1];
-	FY[1] = (ReactiveF()-GravitationF(Y[0], rMass+fMass, pMass)+N(ReactiveF() - GravitationF(Y[0], rMass + fMass, pMass))) / (rMass + fMass);
 
 	return FY;
 }
+
+double Rocket::Fr() {
+	if (fMass <= 0) return 0;
+	return (fCons*fVel / (rMass + fMass));
+}
+
+double Rocket::N(double F) {
+	if (Y[0] - pRadius > 0) return 0;
+	return F;
+}
+
 double Rocket::Step(double interval) {
 	NextStep(interval);
 
@@ -51,7 +47,7 @@ double Rocket::Step(double interval) {
 }
 
 double Rocket::get_h() { return (Y[0]- pRadius); }
-double Rocket::get_V() { return Y[0];  }
-double Rocket::get_a() { return Y[1];  }
+double Rocket::get_V() { return Y[1];  }
+double Rocket::get_a() { return FY[1];  }
 double Rocket::get_t() { return t;  }
 double Rocket::get_m() { return fMass; }

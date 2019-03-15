@@ -56,9 +56,11 @@ namespace JetPropulsion {
 	System::Void Window::timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
 		R->Step((double)timer1->Interval / 1000.0);
 
-		HeightChart->Series["Series1"]->Points->AddXY(0.00001, R->get_h());
+		HeightChart->Series[R->get_V() > 0 ? "Series1" : "Series2"]->Points->AddXY(0.000001, R->get_h());
 		VelocityChart->Series["Series1"]->Points->AddXY(R->get_t(), R->get_V());
 		AccelChart->Series["Series1"]->Points->AddXY(R->get_t(), R->get_a());
 		MassChart->Series["Series1"]->Points->AddXY(R->get_t(), R->get_m());
+
+		if (R->get_h() < 0) StopButton_Click(timer1, e);
 	}
 }

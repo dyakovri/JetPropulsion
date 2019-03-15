@@ -85,14 +85,15 @@ namespace JetPropulsion {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea13 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series16 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series17 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea14 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series18 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea15 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series19 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea16 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series20 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->HeightChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->VelocityChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->MassChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
@@ -134,21 +135,26 @@ namespace JetPropulsion {
 			// 
 			this->HeightChart->BackColor = System::Drawing::SystemColors::Control;
 			this->HeightChart->BorderlineColor = System::Drawing::Color::Transparent;
-			chartArea1->AxisX->Maximum = 1;
-			chartArea1->AxisX->Minimum = -1;
-			chartArea1->Name = L"ChartArea1";
-			this->HeightChart->ChartAreas->Add(chartArea1);
+			chartArea13->AxisX->Maximum = 1;
+			chartArea13->AxisX->Minimum = -1;
+			chartArea13->AxisY->Minimum = 0;
+			chartArea13->Name = L"ChartArea1";
+			this->HeightChart->ChartAreas->Add(chartArea13);
 			this->HeightChart->Dock = System::Windows::Forms::DockStyle::Left;
 			this->HeightChart->Location = System::Drawing::Point(0, 0);
 			this->HeightChart->Name = L"HeightChart";
 			this->HeightChart->Padding = System::Windows::Forms::Padding(3);
 			this->HeightChart->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Bright;
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
-			series1->Name = L"Series1";
-			series1->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
-			series1->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
-			this->HeightChart->Series->Add(series1);
+			series16->ChartArea = L"ChartArea1";
+			series16->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series16->Name = L"Series1";
+			series16->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
+			series16->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
+			series17->ChartArea = L"ChartArea1";
+			series17->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series17->Name = L"Series2";
+			this->HeightChart->Series->Add(series16);
+			this->HeightChart->Series->Add(series17);
 			this->HeightChart->Size = System::Drawing::Size(219, 544);
 			this->HeightChart->TabIndex = 0;
 			// 
@@ -156,19 +162,19 @@ namespace JetPropulsion {
 			// 
 			this->VelocityChart->BackColor = System::Drawing::SystemColors::Control;
 			this->VelocityChart->BorderlineColor = System::Drawing::Color::Transparent;
-			chartArea2->AxisX->Title = L"t, s";
-			chartArea2->AxisY->Title = L"V, m/s";
-			chartArea2->Name = L"VelocityChart";
-			this->VelocityChart->ChartAreas->Add(chartArea2);
+			chartArea14->AxisX->Title = L"t, s";
+			chartArea14->AxisY->Title = L"V, m/s";
+			chartArea14->Name = L"VelocityChart";
+			this->VelocityChart->ChartAreas->Add(chartArea14);
 			this->VelocityChart->Location = System::Drawing::Point(225, 12);
 			this->VelocityChart->Name = L"VelocityChart";
 			this->VelocityChart->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Bright;
-			series2->ChartArea = L"VelocityChart";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
-			series2->Name = L"Series1";
-			series2->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
-			series2->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
-			this->VelocityChart->Series->Add(series2);
+			series18->ChartArea = L"VelocityChart";
+			series18->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series18->Name = L"Series1";
+			series18->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
+			series18->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
+			this->VelocityChart->Series->Add(series18);
 			this->VelocityChart->Size = System::Drawing::Size(412, 170);
 			this->VelocityChart->TabIndex = 1;
 			// 
@@ -176,20 +182,20 @@ namespace JetPropulsion {
 			// 
 			this->MassChart->BackColor = System::Drawing::SystemColors::Control;
 			this->MassChart->BorderlineColor = System::Drawing::Color::Transparent;
-			chartArea3->AxisX->Minimum = 0;
-			chartArea3->AxisX->Title = L"t, s";
-			chartArea3->AxisY->Title = L"m, kg";
-			chartArea3->Name = L"ChartArea1";
-			this->MassChart->ChartAreas->Add(chartArea3);
+			chartArea15->AxisX->Minimum = 0;
+			chartArea15->AxisX->Title = L"t, s";
+			chartArea15->AxisY->Title = L"m, kg";
+			chartArea15->Name = L"ChartArea1";
+			this->MassChart->ChartAreas->Add(chartArea15);
 			this->MassChart->Location = System::Drawing::Point(225, 364);
 			this->MassChart->Name = L"MassChart";
 			this->MassChart->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Bright;
-			series3->ChartArea = L"ChartArea1";
-			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
-			series3->Name = L"Series1";
-			series3->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
-			series3->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
-			this->MassChart->Series->Add(series3);
+			series19->ChartArea = L"ChartArea1";
+			series19->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series19->Name = L"Series1";
+			series19->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
+			series19->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
+			this->MassChart->Series->Add(series19);
 			this->MassChart->Size = System::Drawing::Size(412, 170);
 			this->MassChart->TabIndex = 2;
 			// 
@@ -237,7 +243,6 @@ namespace JetPropulsion {
 			this->fMass->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100, 0, 0, 0 });
 			this->fMass->Location = System::Drawing::Point(656, 76);
 			this->fMass->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
-			this->fMass->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->fMass->Name = L"fMass";
 			this->fMass->Size = System::Drawing::Size(120, 20);
 			this->fMass->TabIndex = 7;
@@ -266,7 +271,6 @@ namespace JetPropulsion {
 			// 
 			this->fCons->Location = System::Drawing::Point(656, 125);
 			this->fCons->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
-			this->fCons->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->fCons->Name = L"fCons";
 			this->fCons->Size = System::Drawing::Size(120, 20);
 			this->fCons->TabIndex = 10;
@@ -294,14 +298,14 @@ namespace JetPropulsion {
 			// 
 			// fVel
 			// 
+			this->fVel->DecimalPlaces = 1;
 			this->fVel->Location = System::Drawing::Point(656, 187);
 			this->fVel->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
-			this->fVel->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->fVel->Name = L"fVel";
 			this->fVel->Size = System::Drawing::Size(120, 20);
 			this->fVel->TabIndex = 13;
 			this->fVel->ThousandsSeparator = true;
-			this->fVel->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5000, 0, 0, 0 });
+			this->fVel->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 81, 0, 0, 65536 });
 			this->fVel->ValueChanged += gcnew System::EventHandler(this, &Window::fVel_ValueChanged);
 			// 
 			// label8
@@ -402,20 +406,20 @@ namespace JetPropulsion {
 			// 
 			this->AccelChart->BackColor = System::Drawing::SystemColors::Control;
 			this->AccelChart->BorderlineColor = System::Drawing::Color::Transparent;
-			chartArea4->AxisX->Minimum = 0;
-			chartArea4->AxisX->Title = L"t, s";
-			chartArea4->AxisY->Title = L"a, m/s2";
-			chartArea4->Name = L"ChartArea1";
-			this->AccelChart->ChartAreas->Add(chartArea4);
+			chartArea16->AxisX->Minimum = 0;
+			chartArea16->AxisX->Title = L"t, s";
+			chartArea16->AxisY->Title = L"a, m/s2";
+			chartArea16->Name = L"ChartArea1";
+			this->AccelChart->ChartAreas->Add(chartArea16);
 			this->AccelChart->Location = System::Drawing::Point(225, 188);
 			this->AccelChart->Name = L"AccelChart";
 			this->AccelChart->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Bright;
-			series4->ChartArea = L"ChartArea1";
-			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
-			series4->Name = L"Series1";
-			series4->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
-			series4->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
-			this->AccelChart->Series->Add(series4);
+			series20->ChartArea = L"ChartArea1";
+			series20->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series20->Name = L"Series1";
+			series20->XValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
+			series20->YValueType = System::Windows::Forms::DataVisualization::Charting::ChartValueType::Double;
+			this->AccelChart->Series->Add(series20);
 			this->AccelChart->Size = System::Drawing::Size(412, 170);
 			this->AccelChart->TabIndex = 2;
 			// 
@@ -448,8 +452,9 @@ namespace JetPropulsion {
 			this->Controls->Add(this->MassChart);
 			this->Controls->Add(this->VelocityChart);
 			this->Controls->Add(this->HeightChart);
-			this->MinimizeBox = false;
-			this->MinimumSize = System::Drawing::Size(730, 560);
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(839, 583);
+			this->MinimumSize = System::Drawing::Size(839, 583);
 			this->Name = L"Window";
 			this->ShowIcon = false;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->HeightChart))->EndInit();
